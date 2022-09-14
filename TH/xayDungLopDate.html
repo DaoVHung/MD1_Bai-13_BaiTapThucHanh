@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay Dung Lop Date</title>
+</head>
+<body>
+
+<script>
+    class MyDate{
+        day;
+        month;
+        year;
+
+
+        constructor(day, month, year) {
+            this._day = day;
+            this._month = month;
+            this._year = year;
+        }
+
+        get day() {
+            return this._day;
+        }
+
+        set day(value) {
+            this._day = value;
+        }
+
+        get month() {
+            return this._month;
+        }
+
+        set month(value) {
+            this._month = value;
+        }
+
+        get year() {
+            return this._year;
+        }
+
+        set year(value) {
+            this._year = value;
+        }
+
+// constructor(day, month, year) {
+        //     this.day = day;
+        //     this.month = month;
+        //     this.year = year;
+        // }
+        // setDay(day){
+        //     this.day = day
+        // }
+        // getDay(){
+        //     return this.day
+        // }
+        // setMonth(month){
+        //     this.month = month
+        // }
+        // getMonth(){
+        //     return this.month
+        // }
+        // setYear(year){
+        //     this.year = year
+        // }
+        // getYear(){
+        //     return this.year
+        // }
+        //
+        // setDate(day,month,year){
+        //     this.day = day;
+        //     this.month = month
+        //     this.year = year
+        // }
+        // toString(){
+        //     return this.day +'/'+this.month+'/'+this.year
+        // }
+
+    }
+let time = new MyDate(2,4,2022);
+    let day=time.getDay()
+    let month=time.getMonth()
+    let year=time.getYear()
+
+    console.log()
+
+MyDate=time.setDate(7,3,1999)
+
+MyDate=time.toString()
+    console.log(MyDate)
+
+
+
+
+</script>
+</body>
+</html>

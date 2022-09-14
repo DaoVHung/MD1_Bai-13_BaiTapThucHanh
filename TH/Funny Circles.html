@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="funny.js"></script>
+</head>
+<canvas id="myPoint" width="900" height="700" style="border: 1px solid pink"></canvas>
+<body>
+<script>
+    let ctx=document.getElementById('myPoint').getContext('2d')
+    for (let i = 0; i < 30; i++) {
+        let radius= Math.floor(Math.random() * 80);
+        console.log("r1------",radius)
+        let x = Math.random() * 900+radius;
+        console.log("x---",x)
+        let y = Math.random() * 700+radius;
+        console.log("y----",y)
+        let red = Math.floor(Math.random()*255);
+        let green =  Math.floor(Math.random()*255);
+        let blue =  Math.floor(Math.random()*255);
+        let color= "rgb(" + red + "," + blue + "," + green +")";
+        let circle=new MyPoint(x,y,radius,color)
+        circle.drawCircle(ctx)
+    }
+</script>
+</body>

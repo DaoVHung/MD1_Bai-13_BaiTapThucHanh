@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh Chu Nhat</title>
+    <script src="HinhChuNhat.js"></script>
+</head>
+<canvas id="hinhChuNhat" width="500" height="300" style="border: 3px solid black">
+</canvas>
+<body>
+<script>
+    let hinhVe= new HinhChuNhat(1000,300)
+    let dientich= hinhVe.getDienTich()
+    let chuvi= hinhVe.getChuVi()
+    alert("Diện tích hình chữ nhật là: "+dientich)
+    alert("Chu vi hình chữ nhật là: "+chuvi)
+</script>
+
+</body>
+</html>

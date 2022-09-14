@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Tank</title>
+</head>
+<body>
+<img height="1000" width="1500"  src="IMG_6582.JPG">
+<form>
+    <img src="nwdn_file_temp_1610529779641.jpg" id="HUNG" >
+    <img id="GAI" width="500" height="500"  src="305395984_1138403366885362_7207686054777706708_n.jpg" >
+<script>
+    let gai=document.getElementById("GAI");
+    let anh=document.getElementById("HUNG");
+    function style(){
+        anh.style.position= 'absolute';
+        anh.style.left = 0 + 'px';
+        anh.style.top = 0+ 'px';
+        anh.style.width = 200 +'px';
+        anh.style.height = 200 + 'px';
+        gai.style.position= 'absolute';
+        gai.style.left =500+ 'px';
+        gai.style.top =500+ 'px';
+        gai.style.width = 200 +'px';
+        gai.style.height = 200 + 'px';
+    }
+    style()
+    function diLen() {
+        anh.style.top = parseInt(anh.style.top) - 50 + 'px';
+    }
+    function diXuong() {
+        anh.style.top = parseInt(anh.style.top) + 50 + 'px';
+    }
+    function sangTrai() {
+        anh.style.left = parseInt(anh.style.left) - 50 + 'px';
+    }
+    function sangPhai() {
+        anh.style.left = parseInt(anh.style.left) + 50 + 'px';
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                sangTrai();
+                break;
+            case 39:
+                sangPhai();
+                break;
+            case 38:
+                diLen();
+                break;
+            case 40:
+                diXuong();
+                break;
+        }
+        checkCollision()
+    }
+    window.addEventListener('keydown', moveSelection);
+    function checkCollision(){
+        let anhLeft=parseInt(anh.style.left)
+        let anhTop=parseInt(anh.style.top)
+        let anhWidth=parseInt(anh.style.width)
+        let anhHeight=parseInt(anh.style.height)
+
+        let gaiLeft=parseInt(gai.style.left)
+        let gaiTop=parseInt(gai.style.top)
+        let gaiWidth=parseInt(gai.style.width)
+        let gaiHeight=parseInt(gai.style.height)
+
+        if( (anhLeft+anhWidth)>gaiLeft &&
+            anhLeft<(gaiLeft+gaiWidth) &&
+            (anhTop+anhHeight)>gaiTop  &&
+            anhTop<(gaiTop+gaiHeight) )
+        {
+            anh.src="anime_hài_hước_hay_nhat_10.jpg"
+            gai.src="anime_hài_hước_hay_nhat_10.jpg"
+        }
+    }
+</script>
+</form>
+</body>
+</html>

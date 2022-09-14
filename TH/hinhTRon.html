@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh Tron</title>
+</head>
+<body>
+<script>
+    class Circle{
+        radius;
+        color;
+        area;
+
+        constructor(radius, color, area) {
+            this.radius = radius;
+            this.color = color;
+            this.area = area;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        setRadius(radius) {
+            this.radius = radius
+            ;
+        }
+
+        getColor() {
+            return this.color;
+        }
+
+        setColor(color) {
+            this.color = color;
+        }
+
+        getArea() {
+            return this.radius*this.radius*Math.PI;
+        }
+
+        setArea(area) {
+            this.area = area;
+        }
+    }
+let hinhTron = new Circle(4,"red")
+    let radius=hinhTron.getRadius()
+    let area=hinhTron.getArea()
+    console.log(area)
+
+
+
+
+
+
+</script>
+</body>
+</html>

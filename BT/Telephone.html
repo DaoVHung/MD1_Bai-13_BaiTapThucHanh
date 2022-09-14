@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả điện thoại</title>
+</head>
+<body>
+<h1>IPHONE</h1>
+<button id="nguonIphone" onclick="batTat(this.id)">POWER</button>
+<button id="pinIphone" onclick="hienThiPin(this.id)">PIN</button>
+
+<textarea name="" id="iphone" cols="40" rows="20"></textarea>
+<br>
+<h1>NOKIA</h1>
+<button id="nguonNokia" onclick="batTat(this.id)">POWER</button>
+<button id="pinNokia" onclick="hienThiPin(this.id)">PIN</button>
+<textarea name="" id="nokia" cols="40" rows="20"></textarea>
+</body>
+</html>
+<script>
+    class Tele{
+
+        constructor(name,status,pin) {
+            this.status = status;
+            this.name= name
+            this.pin=pin
+        }
+        getStatus(){
+            return this.status
+        }
+        setStatus(status){
+            this.status = status
+        }
+
+
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.status = name
+        }
+        getPin(){
+            return this.pin;
+        }
+        setPin(pin){
+            this.pin = pin
+        }
+
+    }
+
+    let IPHONE= new Tele('Iphone', false,100)
+    let NOKIA= new Tele('nokia', false,100)
+    function batTat(id){
+        console.log('========id ', id)
+        if(id==="nguonIphone"){
+            if(IPHONE.getStatus()){
+                IPHONE.setStatus();
+                document.getElementById('nguonIphone').innerHTML = "OFF"
+            }else {
+                IPHONE.setStatus();
+                document.getElementById('nguonIphone').innerHTML = " ON "
+            }
+        } else if(id==="nguonNokia"){
+            if(NOKIA.getStatus()){
+                NOKIA.setStatus();
+                document.getElementById('nguonNokia').innerHTML = "OFF"
+            }else {
+                NOKIA.setStatus();
+                document.getElementById('nguonNokia').innerHTML = " ON "
+            }
+        }
+   }
+   function hienThiPin(id){
+        if(id==='pinIphone'){
+            document.getElementById("pinIphone").innerHTML = IPHONE.getPin()+"%"}
+   }
+    if(id==='pinNokia'){
+        document.getElementById("pinNokia").innerHTML = NOKIA.getPin()+"%";
+    }
+
+
+
+
+</script>
